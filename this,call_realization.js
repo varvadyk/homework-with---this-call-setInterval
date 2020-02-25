@@ -32,7 +32,7 @@ const country_litv = litva;
 
   document.writeln(`<p>  Function #4 : in console </p>`);
   function getMySalary(country){
-    setInterval(() => {
+      let timerId = setInterval(() => {
       const min = 1500;
       const max = 2000;
       const salary = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -47,6 +47,7 @@ const country_litv = litva;
 
   });
       },10000);
+  setTimeout(() => { clearInterval(timerId); alert('stop'); }, 50000);  
   } 
 getMySalary(country_ukr);
  
